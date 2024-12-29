@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Surgeons</title>
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgTwulLFyND03cBiO38G1rGbrYkoApJOA&callback=initMap"></script>
+</head>
+<body>
+    <div id="map" id="map"></div>
+    <script>
+       function initMap() {
+           // The location of the map's center
+           var center = {lat: -33.8688, lng: 151.2093};
+
+           // Create a map object
+           var map = new google.maps.Map(document.getElementById('map'), {
+               center: center,
+               zoom: 12
+           });
+
+           // Add a marker
+           var marker = new google.maps.Marker({
+               position: center,
+               map: map
+           });
+       }
+    </script>
+</body>
+</html>

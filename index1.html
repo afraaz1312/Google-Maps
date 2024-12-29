@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MapMyIndia Integration</title>
+  <script src="https://apis.mapmyindia.com/advancedmaps/v1/129b9d0492e30905278f46c0a0ad40fe/map_load?v=1.5"></script>
+  <style>
+    #map {
+      height: 100vh; /* Full-screen height */
+      width: 100%;   /* Full width */
+    }
+  </style>
+</head>
+<body>
+  <h1>My MapMyIndia Map</h1>
+  <div id="map"></div>
+  <script>
+    // Initialize the map
+    let map;
+    function initializeMap() {
+      map = new MapmyIndia.Map("map", {
+        center: [28.6139, 77.209], // Default location (New Delhi)
+        zoom: 12,
+      });
+    }
+
+    // Call the initialization function
+    initializeMap();
+  </script>
+</body>
+</html>
+
